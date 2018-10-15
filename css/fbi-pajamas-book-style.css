@@ -1,0 +1,1327 @@
+body { font-family: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: bold; font-weight: normal }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section { padding: 0 }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ============ WRAPPERS =========== */
+.wrapper-full, .wrapper-regular, .wrapper-narrow { margin: 0 auto; padding: 0 }
+h2, p { line-height: 1.3}
+h2 { margin: 0 0 2px 0 }
+
+.wrapper-full { width: 100%; padding: 0 } 
+
+.bg-dark { background: #000; background-image: linear-gradient(#000, #333) }
+
+.bg-blue-white { background: #fff }
+.bg-blue-medium { background: #61dabf }
+.bg-blue-light { background: #CBF2FE }
+.bg-gray-light { background: #f5f1ed }
+.bg-yellow-light { background: #FFF9C4 }
+.bg-yellow-js { background: rgb(247,233,30) }
+
+.bg-dark .flex-col h1, 
+.bg-dark .flex-col h2, 
+.bg-dark .flex-col h3, 
+.bg-dark .flex-col p, 
+.bg-dark .flex-col li { color: #fff }
+.bg-blue-medium .flex-col h1, 
+.bg-blue-medium .flex-col h2, 
+.bg-blue-medium .flex-col h3, 
+.bg-blue-medium .flex-col p, 
+.bg-blue-medium .flex-col li,
+.bg-blue-light .flex-col h1, 
+.bg-blue-light .flex-col h2, 
+.bg-blue-light .flex-col h3, 
+.bg-blue-light .flex-col p, 
+.bg-blue-light .flex-col li,
+.bg-blue-yellow .flex-col h1, 
+.bg-blue-yellow .flex-col h2, 
+.bg-blue-yellow .flex-col h3, 
+.bg-blue-yellow .flex-col p, 
+.bg-blue-yellow .flex-col li { color: #000 }
+
+.bg-white .flex-col h2, .bg-gray-light h2 { color: #003c8f }
+.bg-white .flex-col h3 { color: #003c8f }
+.bg-white .flex-col p, 
+.bg-white .flex-col li { color: #1c313a }
+
+section.email-form { background: linear-gradient(#555,#000) }
+
+@media all and (max-width:400px) {
+	.wrapper-regular, .wrapper-narrow { width: 90%}
+}
+
+@media all and (min-width:401px) and (max-width:479px) { 
+	.wrapper-regular, .wrapper-narrow { width: 90% }
+}
+
+@media all and (min-width:480px) and (max-width:767px) {
+	.wrapper-regular, .wrapper-narrow { width: 80% }
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+	.wrapper-regular { width: 80%}
+	.wrapper-narrow { width: 60% }
+}
+
+@media all and (min-width: 992px) and (max-width: 1199px) {
+	.wrapper-regular { width:86% }
+	.wrapper-narrow { width:54% }
+}
+
+@media all and (min-width: 1200px) {
+	.wrapper-regular { width:86% }
+	.wrapper-narrow { width: 50% }
+}
+
+
+/* ===== FLEXBOX COLUMNS ======= */
+
+.flex-grid {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.flex-grid .flex-col { flex: 1; padding: 0 15px }
+
+@media (max-width: 767px) {
+  .flex-grid { display: block }
+}
+
+/* == IMAGES ====*/
+
+.img-fluid { max-width: 100%; height: auto }
+
+/* =============== NAVBAR =======================*/
+
+nav.navbar { background: #ff0000; margin:0  }
+#logo, .nav-links, #logo:hover, .nav-links:hover { text-decoration: none }
+#logo { display: inline-block; height: auto }
+ul#main-nav { list-style-type: none; background: #ff0000; margin: 0 }
+nav.navbar li { text-align: left }
+nav.navbar li a.nav-links { color:#fff; font-weight: bold; border-bottom-style: solid; border-bottom-width: 2px; padding-bottom:4px }
+nav.navbar li a.nav-links:link,
+nav.navbar li a.nav-links:visited { border-bottom-color: #fff }
+nav.navbar li a.nav-links:hover,
+nav.navbar li a.nav-links:active, 
+nav.navbar li a.nav-links.selected { border-bottom-color: #ff0000 }
+
+nav.navbar li a.nav-links.buy-book { border-style: solid; border-width: 2px; border-radius: 6px }
+nav.navbar li a.nav-links.buy-book:link, nav.navbar li a.nav-links.buy-book:visited { 
+	border-color: rgb(168,135,52); color: #003c8f;
+	background: linear-gradient(rgb(245,214,137), rgb(238,186,53))
+}
+
+nav.navbar li a.nav-links.buy-book:active, nav.navbar li a.nav-links.buy-book:hover { 
+	border-color: rgb(34,148,39); color: #fff;
+	background: linear-gradient(rgb(78,208,81), rgb(17,152,24));
+}
+
+@media all and (max-width:767px) {
+	nav.navbar { padding: 10px 15px 5px 12px; box-shadow: 0 4px 2px -2px gray }
+	nav.navbar #logo { margin: 0; padding:0 }
+	#navbar-toggle { position: absolute; top: 22px; right: 20px; cursor: pointer; color: rgba(255, 255, 255, 1); font-size: 24px }
+	#navbar-toggle:hover { color: rgba(255, 255, 255, 0.7) }
+	ul#main-nav { display: none; flex-direction: column }
+	nav.navbar ul#main-nav    { margin-top:20px; padding: 0 0 12px 20px }
+	nav.navbar ul#main-nav li { margin: 0 0 24px 0 }
+	nav.navbar li a.nav-links.buy-book { display: inline-block }
+
+}
+
+@media all and (max-width:320px) {
+	#navbar-toggle { top: 20px; right: 20px; font-size: 24px }
+	nav.navbar #logo { width:60% }
+	nav.navbar li a.nav-links.buy-book { margin-top:10px; font-size:16px; padding: 6px 20px }
+}
+
+@media all and (min-width:321px) and (max-width:374px) {
+	#navbar-toggle { top: 22px; right: 20px; font-size: 26px }
+	nav.navbar #logo { width: 56% }
+	nav.navbar li a.nav-links.buy-book { margin-top:10px; font-size:16px; padding: 6px 20px }
+}
+
+@media all and (min-width:375px) and (max-width:413px) {
+	#navbar-toggle { top: 20px; right: 20px; font-size: 28px }
+	nav.navbar #logo { width:50% }
+	nav.navbar li a.nav-links.buy-book { margin-top:10px; font-size:16px; padding: 6px 20px }
+}
+
+@media all and (min-width:414px) and (max-width:479px) {
+	#navbar-toggle { top: 20px; right: 20px; font-size: 28px }
+	nav.navbar #logo { width:50% }
+	nav.navbar li a.nav-links.buy-book { margin-top:10px; font-size:17px; padding: 6px 20px }
+}
+
+@media all and (min-width:480px) and (max-width:639px) {
+	#navbar-toggle { top: 22px; right: 20px; font-size: 28px }
+	nav.navbar #logo { width:42%; margin-bottom: 6px }
+	nav.navbar li a.nav-links.buy-book { margin-top:10px; font-size:18px; padding: 6px 20px }
+}
+
+@media all and (min-width:640px) and (max-width:767px) {
+	#navbar-toggle { top: 24px; right: 20px; font-size: 32px }
+	nav.navbar #logo { width:36%; margin-bottom: 6px }
+	nav.navbar li a.nav-links.buy-book { margin-top:10px; font-size:18px; padding: 6px 20px }
+}
+
+@media screen and (min-width: 768px) { 
+	nav.navbar { display: flex; justify-content: space-between; align-items: center }
+	nav.navbar { padding: 0 15px 5px 12px; box-shadow: 0 6px 4px -2px gray; }
+	#navbar-toggle { display: none }
+	ul#main-nav { display: flex; flex-direction: row; justify-content: flex-end }
+	ul#main-nav:first-child { margin-left: 0 }
+	ul#main-nav:last-child { margin-right: 0 }
+}
+
+@media all and (min-width:768px) and (max-width: 929px) {
+	nav.navbar #logo { width:70%; margin: 8px 0 4px 10px;  }
+	nav.navbar ul#main-nav { margin-left: -60px }
+	nav.navbar li a.nav-links { font-size: 17px; margin-right:40px }
+	nav.navbar li:last-child { margin-top:4px}
+	nav.navbar li a.nav-links.buy-book { font-size:16px; padding: 6px 20px }
+}
+
+@media all and (min-width:930px) and (max-width: 991px) {
+	nav.navbar #logo { width:70%; margin: 8px 0 4px 10px;  }
+	nav.navbar ul#main-nav { margin-left: -100px }
+	nav.navbar li a.nav-links { font-size: 17px; margin-right:64px }
+	nav.navbar li:last-child { margin-top:4px}
+	nav.navbar li a.nav-links.buy-book { font-size:16px; padding: 6px 21px }
+}
+
+@media all and (min-width:992px) and (max-width: 1023px) {
+	nav.navbar #logo { width:70%; margin: 8px 0 4px 10px;  }
+	nav.navbar ul#main-nav { margin-left: -100px }
+	nav.navbar li a.nav-links { font-size: 18px; margin-right:70px }
+	nav.navbar li:last-child { margin-top:4px}
+	nav.navbar li a.nav-links.buy-book { font-size:17px; padding: 6px 24px }
+}
+
+@media all and (min-width:1024px) and (max-width: 1199px) {
+	nav.navbar #logo { width:70%; margin: 8px 0 4px 40px;  }
+	nav.navbar ul#main-nav { margin-left: -100px }
+	nav.navbar li a.nav-links { font-size: 18px; margin-right:70px }
+	nav.navbar li:last-child { margin-top:4px}
+	nav.navbar li a.nav-links.buy-book { font-size:18px; padding: 6px 24px }
+}
+
+@media all and (min-width: 1200px) and (max-width: 1365px) {
+	nav.navbar #logo { width:70%; margin: 8px 0 4px 50px;  }
+	nav.navbar ul#main-nav { margin-left: -100px }
+	nav.navbar li a.nav-links { font-size: 20px; margin-right:100px }
+	nav.navbar li:last-child { margin-top:4px}
+	nav.navbar li a.nav-links.buy-book { font-size:19px; padding: 6px 26px }
+}
+
+@media all and (min-width: 1366px) {
+	nav.navbar #logo { width:70%; margin: 8px 0 4px 60px;  }
+	nav.navbar ul#main-nav { margin-left: -100px }
+	nav.navbar li a.nav-links { font-size: 22px; margin-right:100px }
+	nav.navbar li:last-child { margin-top:4px}
+	nav.navbar li a.nav-links.buy-book { font-size:19px; padding: 6px 28px }
+}
+
+
+/* =================== JUMBOTRON =================== */
+
+.jumbotron { text-align:center; margin: auto }
+.jumbotron h1, .jumbotron h2, .jumbotron h3 { font-weight: bold }
+.jumbotron h1 { color: #2c3e50 }
+.jumbotron h2 { color: #636e72; letter-spacing: 1px }
+.jumbotron h3 { text-transform:uppercase; letter-spacing: 1px }
+.jumbotron h3 span { font-weight: normal }
+
+.jumbotron a.learn-more, .jumbotron a.buy-now { display: inline-block; border-style: solid; border-width: 2px; border-radius: 25px; text-decoration: none; font-weight: bold }
+
+.jumbotron .flex-grid a.learn-more:link,
+.jumbotron .flex-grid a.learn-more:visited { border-color: #ff0000; background:#ff0000; color: #fff }
+.jumbotron .flex-grid a.learn-more:hover,
+.jumbotron .flex-grid a.learn-more:active  { border-color: #ff0000; background:#ffffff;  color: #ff0000 }
+
+.jumbotron a.buy-now:link, .jumbotron a.buy-now:visited { 
+	border:2px solid rgb(168,135,52); color: #003c8f;
+	background: linear-gradient(rgb(245,214,137), rgb(238,186,53))
+}
+
+.jumbotron a.buy-now:active, .jumbotron a.buy-now:hover { 
+	border:2px solid rgb(34,148,39); color: #fff;
+	background: linear-gradient(rgb(78,208,81), rgb(17,152,24));
+}
+
+
+/* Mobiles */
+@media all and (max-width:767px) {
+	.jumbotron { margin:0 auto; text-align: center  }
+	.jumbotron .flex-grid { flex-direction: column }
+	.jumbotron header h2 { line-height: 1.1 }
+	.jumbotron h1, .jumbotron h2, .jumbotron h3 { margin: 0 auto }
+	.jumbotron .img-fluid { text-align: center; display: block; margin: 0 auto }
+	.jumbotron a.learn-more, .jumbotron a.buy-now { display: inline-block }
+}
+
+@media all and (max-width:320px) {
+	.jumbotron { padding-top:44px; padding-bottom:10px }
+	.jumbotron .img-fluid { max-height:280px; margin: -20px auto 32px auto }
+	.jumbotron h1 { margin: -30px auto 16px auto; font-size: 26px; line-height:1.1; width: 90% }
+	.jumbotron h2 { font-size:20px; margin-bottom:20px }
+	.jumbotron h3 { font-size:15px; margin-bottom:20px; line-height: 1.6 }
+	.jumbotron a.learn-more, .jumbotron a.buy-now { font-size: 16px; margin-bottom: 32px  }
+	.jumbotron a.learn-more { padding:8px 26px }
+	.jumbotron a.buy-now { padding:8px 26px }
+}
+
+@media all and (min-width:321px) and (max-width:374px) {
+	.jumbotron { padding-top:44px; padding-bottom:40px }
+	.jumbotron .img-fluid { max-height:280px; margin: -20px auto 32px auto }
+	.jumbotron h1 { margin: -30px auto 16px auto; font-size: 28px; line-height:1.1; width: 90% }
+	.jumbotron h2 { font-size:20px; margin-bottom:20px }
+	.jumbotron h3 { font-size:15px; margin-bottom:20px; line-height: 1.6 }
+	.jumbotron a.learn-more, .jumbotron a.buy-now { font-size: 16px; margin-bottom: 32px  }
+	.jumbotron a.learn-more { padding:8px 26px }
+	.jumbotron a.buy-now { padding:8px 26px }
+}
+
+@media all and (min-width:375px) and (max-width:479px) {
+	.jumbotron { padding-top:44px; padding-bottom:40px }
+	.jumbotron .img-fluid { max-height:320px; margin: -20px auto 32px auto }
+	.jumbotron h1 { margin: -40px auto 16px auto; font-size: 30px; line-height:1.1; width: 90% }
+	.jumbotron h2 { font-size:20px; margin-bottom:20px }
+	.jumbotron h3 { font-size:15px; margin-bottom:30px; line-height: 1.6 }
+	.jumbotron a.learn-more, .jumbotron a.buy-now { font-size: 16px; margin-bottom: 32px }
+	.jumbotron a.learn-more { padding:8px 26px; margin-left:20px; margin-right: 20px; }
+	.jumbotron a.buy-now { padding:8px 26px }
+}
+
+@media all and (min-width:480px) and (max-width:639px) {
+	.jumbotron { padding-top:44px; padding-bottom:40px }
+	.jumbotron .img-fluid { max-height:320px; margin: -20px auto 32px auto }
+	.jumbotron h1 { margin: -40px auto 16px auto; font-size: 40px; line-height:1; width: 70% }
+	.jumbotron h2 { font-size:24px; margin-bottom:20px }
+	.jumbotron h3 { font-size:17px; margin-bottom:30px; line-height: 1.6 }
+	.jumbotron a.learn-more, .jumbotron a.buy-now { font-size: 17px; margin-bottom: 32px }
+	.jumbotron a.learn-more { padding:8px 26px; margin-right: 40px }
+	.jumbotron a.buy-now { padding:8px 26px }
+}
+
+@media all and (min-width:640px) and (max-width:767px) {
+	.jumbotron { padding-top:44px; padding-bottom:40px }
+	.jumbotron .img-fluid { max-height:320px; margin: 0 auto 32px auto }
+	.jumbotron h1 { margin: -40px auto 16px auto; font-size: 40px; line-height:1; width: 70% }
+	.jumbotron h2 { font-size:24px; margin-bottom:20px }
+	.jumbotron h3 { font-size:17px; margin-bottom:30px; line-height: 1.6 }
+	.jumbotron a.learn-more, .jumbotron a.buy-now { font-size: 17px; margin-bottom: 32px }
+	.jumbotron a.learn-more { padding:8px 26px; margin-right: 40px }
+	.jumbotron a.buy-now { padding:8px 26px }
+}
+
+
+/* Desktop */
+@media all and (min-width:768px) {
+	.jumbotron .flex-grid { text-align: left }
+	.jumbotron .flex-grid { display: flex; flex-wrap: wrap; justify-content: left; align-items: flex-start }
+	.jumbotron .flex-grid h1, .jumbotron .flex-grid h2, .jumbotron .flex-grid h3 { margin-top:0; text-align: left }
+	.jumbotron .flex-grid h3 { line-height: 1.5 }
+	.jumbotron .flex-grid .img-fluid { float: right }
+}
+
+@media all and (min-width:768px) and (max-width: 991px) {
+	.jumbotron { padding-top:30px; padding-bottom:0 }
+	.jumbotron .img-fluid { float: right; max-height: 380px; margin: 0 -20px 0 0 }
+	.jumbotron h1 { margin-bottom: 28px; font-size: 32px; line-height: 1.1; width: 60% }
+	.jumbotron h2 { font-size:22px; margin-bottom:8px }
+	.jumbotron h3 { font-size:16px; margin-bottom:42px }
+	.jumbotron a.learn-more, .jumbotron a.buy-now { font-size: 16px }
+	.jumbotron a.learn-more { padding:8px 12px; margin-right:12px  }
+	.jumbotron a.buy-now { padding:8px 20px }
+}
+
+@media all and (min-width:992px) and (max-width: 1023px) {
+	.jumbotron { padding-top:40px; padding-bottom:0 }
+	.jumbotron .img-fluid { float: right; max-height: 380px; margin: 0 -20px 0 0 }
+	.jumbotron h1 { margin-bottom: 28px; font-size: 32px; line-height: 1.1; width: 60% }
+	.jumbotron h2 { font-size:22px; margin-bottom:28px }
+	.jumbotron h3 { font-size:18px; margin-bottom:42px }
+	.jumbotron a.learn-more, .jumbotron a.buy-now { font-size: 16px }
+	.jumbotron a.learn-more { padding:8px 22px; margin-right:32px  }
+	.jumbotron a.buy-now { padding:8px 32px }
+}
+
+@media all and (min-width:1024px) and (max-width: 1279px) {
+	.jumbotron { padding-top:50px; padding-bottom:0 }
+	.jumbotron .img-fluid { float: right; max-height: 420px; margin: 0 -20px 0 0 }
+	.jumbotron h1 { margin-bottom: 28px; font-size: 40px; line-height: 1.1; width: 70% }
+	.jumbotron h2 { font-size:26px; margin-bottom:28px }
+	.jumbotron h3 { font-size:20px; margin-bottom:42px }
+	.jumbotron a.learn-more, .jumbotron a.buy-now { font-size: 17px }
+	.jumbotron a.learn-more { padding:8px 22px; margin-right:32px  }
+	.jumbotron a.buy-now { padding:8px 32px }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1365px) {
+	.jumbotron { padding-top:50px; padding-bottom:0 }
+	.jumbotron .img-fluid { float: right; max-height: 440px; margin: 0 0 0 0 }
+	.jumbotron .flex-grid h1 { margin: 0 20px 28px -32px; font-size: 42px; line-height: 1.1;width: 70% }
+	.jumbotron .flex-grid h2 { font-size: 34px; margin: 0 0 40px -32px }
+	.jumbotron .flex-grid h3 { font-size: 20px; margin: 0 0 30px -32px  }
+	.jumbotron a.learn-more  { font-size: 19px; padding:12px 32px; margin:0 38px 0 -32px }
+	.jumbotron a.buy-now     { font-size: 19px; padding:12px 44px 12px 38px }
+
+}
+
+@media all and (min-width: 1366px) {
+	.jumbotron { padding: 32px 0 12px 0; max-width:80% }
+	.jumbotron .flex-grid .img-fluid { max-height:560px}
+	.jumbotron .flex-grid h1 { margin: 0 20px 28px -32px; font-size: 64px; line-height: 1 }
+	.jumbotron .flex-grid h2 { font-size: 34px; margin: 0 0 50px -32px }
+	.jumbotron .flex-grid h3 { font-size: 20px; margin: 0 0 40px -32px  }
+	.jumbotron a.learn-more  { font-size: 19px; padding:12px 32px; margin:0 38px 0 -32px }
+	.jumbotron a.buy-now     { font-size: 19px; padding:12px 44px 12px 38px }
+}
+
+/* ========== MIKE MOORE PROFILE ===========  */
+
+section.about-author { background: #f5f1ed }
+section.about-author header {text-align:center }
+section.about-author h2 { font-weight:bold; margin: 0 auto; color: #ff0000 }
+section.about-author p { color: #37474f; line-height: 1.3 }
+section.about-author p a { color: #37474f; line-height: 1.3 }
+section.about-author p a { text-decoration: none; color:#ff0000; border-bottom-style: solid; border-bottom-width: 2px  }
+section.about-author p a:link,
+section.about-author p a:visited { border-bottom-color:#ff0000 }
+section.about-author p a:hover, 
+section.about-author p a:active { border-bottom-color: #fff }
+
+/* mobiles */
+@media all and (max-width:320px) {
+	section.about-author { padding: 30px 0 20px 0}
+	section.about-author h2 { font-size: 22px }
+	section.about-author p { font-size: 15px }
+}
+
+@media all and (min-width:321px) and (max-width:374px) {
+	section.about-author { padding: 30px 0 20px 0}
+	section.about-author h2 { font-size: 22px }
+	section.about-author p { font-size: 15px }
+}
+
+@media all and (min-width:375px) and (max-width:479px) {
+	section.about-author { padding: 30px 0 20px 0}
+	section.about-author h2 { font-size: 24px }
+	section.about-author p { font-size: 16px }
+}
+
+@media all and (min-width:480px) and (max-width:639px) {
+	section.about-author { padding: 30px 0 20px 0}
+	section.about-author h2 { font-size: 26px }
+	section.about-author p { font-size: 16px }
+}
+
+@media all and (min-width:640px) and (max-width:767px) {
+	section.about-author { padding: 30px 0 20px 0}
+	section.about-author h2 { font-size: 28px }
+	section.about-author p { font-size: 16px }
+}
+
+/* desktop */
+
+@media all and (min-width:768px){
+	section.about-author p { line-height:1.4 }
+}
+
+@media all and (min-width:768px) and (max-width: 991px) {
+	section.about-author { padding: 30px 0 20px 0}
+	section.about-author h2 { font-size: 32px }
+	section.about-author p { font-size: 16px }
+}
+
+@media all and (min-width:992px) and (max-width: 1023px) {
+	section.about-author { padding: 40px 0 30px 0}
+	section.about-author h2 { font-size: 38px }
+	section.about-author p { font-size: 17px }
+}
+
+@media all and (min-width:1024px) and (max-width: 1279px) {
+	section.about-author { padding: 40px 0 30px 0}
+	section.about-author h2 { font-size: 42px }
+	section.about-author p { font-size: 18px }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1365px) {
+	section.about-author { padding: 40px 0 30px 0}
+	section.about-author h2 { font-size: 44px }
+	section.about-author p { font-size: 19px }
+}
+
+@media all and (min-width: 1366px) {
+	section.about-author { padding: 40px 0 30px 0}
+	section.about-author h2 { font-size: 48px }
+	section.about-author p { font-size: 20px }
+}
+
+
+/* =========== PULL QUOTES ========== */
+section.pull-quote { text-align: center; position: relative }
+section.pull-quote h4, section.pull-quote p { color: #fff; margin: 0 auto }
+section.pull-quote h4 span { color:red;text-decoration:line-through }
+section.pull-quote h4 span span { color: #fff }
+section.pull-quote p { margin: 0 auto; font-weight:bold }
+
+section.pull-quote strike { text-decoration: none; position: relative; display: inline-block }
+
+section.pull-quote strike:after {
+  content: ""; position: absolute; bottom: 0; left: 0; border-top: 4px solid red; height: 45%;
+  height: calc(50% - 4px); /* 1px = half the line thickness */
+  width: 100%; transform: rotateZ(-4deg);
+}
+
+section.pull-quote blockquote.testimonial:before, 
+section.pull-quote blockquote.testimonial:after {
+	position: absolute;font-size: 80px; line-height: 1;
+	color: red; font-weight: bold; font-family: Georgia, Times, serif
+}
+
+section.pull-quote blockquote.testimonial:before { content: "\201C"; top: 4px; left: 10px }
+section.pull-quote blockquote.testimonial:after  { content: "\201D"; right: 10px; bottom: -0.45em }
+
+div.countdown { color: #333; text-align: center }
+div.countdown li { display: inline-block; list-style-type: none; padding: 1em; color: #fff; font-weight: bold; ;text-transform: uppercase }
+div.countdown li span { font-weight: bold; display: block; color: #fff }
+
+section.pull-quote.bg-dark.count-timer p.inner-top-banner { width:100%; color: #000; background:yellow; text-transform: uppercase}
+
+/* mobiles */
+@media all and (max-width:767px) {
+	section.pull-quote.bg-dark.nyt { background:url('../img/bg-nyt-400.jpg') no-repeat center center fixed; background-size: cover }
+	section.pull-quote.bg-dark.count-timer .countdown li { color: #fff }
+	section.pull-quote.bg-dark.count-timer .wrapper-full { width: 100%}
+	section.pull-quote.bg-dark.count-timer blockquote.testimonial:before, 
+	section.pull-quote.bg-dark.count-timer blockquote.testimonial:after { display: none }
+}
+
+@media all and (max-width:320px) {
+	section.pull-quote { padding-top: 18px; padding-bottom: 18px }
+	section.pull-quote .wrapper-regular { width: 90% }
+	section.pull-quote h4 { font-size: 18px; margin-bottom: 18px;; line-height: 1.4 }
+	section.pull-quote p  { font-size: 16px }
+	section.pull-quote blockquote.testimonial:before, section.pull-quote blockquote.testimonial:after { font-size: 60px }
+	section.pull-quote blockquote.testimonial:before { top: 28px; left: 16px }
+	section.pull-quote blockquote.testimonial:after  { right: 18px; bottom: 0px }
+	section.pull-quote.bg-dark.nyt { background:url('../img/bg-nyt-400.jpg') no-repeat center center; background-size: cover }
+
+	section.pull-quote.bg-dark.count-timer p.inner-top-banner { padding: 6px 0;line-height: 1.3; margin-top:-30px; font-size: 16px}
+	section.pull-quote.bg-dark.count-timer .countdown ul.ul-countdown { margin-left: -48px }
+	section.pull-quote.bg-dark.count-timer .countdown li { margin-left:0; font-size: 20px }
+	section.pull-quote.bg-dark.count-timer .countdown li span { font-size: 52px }
+}
+
+@media all and (min-width:321px) and (max-width:374px) {
+	section.pull-quote { padding-top: 20px; padding-bottom: 20px }
+	section.pull-quote .wrapper-regular { width: 90% }
+	section.pull-quote h4 { font-size: 19px; margin-bottom: 18px;; line-height: 1.4 }
+	section.pull-quote p  { font-size: 16px }
+	section.pull-quote blockquote.testimonial:before, section.pull-quote blockquote.testimonial:after { font-size: 65px }
+	section.pull-quote blockquote.testimonial:before { top: 28px; left: 16px }
+	section.pull-quote blockquote.testimonial:after  { right: 18px; bottom: 0px }
+	section.pull-quote.bg-dark.nyt { background:url('../img/bg-nyt-400.jpg') no-repeat center center; background-size: cover }
+
+	section.pull-quote.bg-dark.count-timer p.inner-top-banner { padding: 8px 0;line-height: 1.3; margin-top:-50px; font-size: 17px}
+	section.pull-quote.bg-dark.count-timer .countdown ul.ul-countdown { margin-left: -48px }
+	section.pull-quote.bg-dark.count-timer .countdown li { margin-left:0; font-size: 20px }
+	section.pull-quote.bg-dark.count-timer .countdown li span { font-size: 52px }
+}
+
+@media all and (min-width:375px) and (max-width:479px) {
+	section.pull-quote { padding-top: 20px; padding-bottom: 20px }
+	section.pull-quote .wrapper-regular { width: 90% }
+	section.pull-quote h4 { font-size: 22px; margin-bottom: 18px;; line-height: 1.4 }
+	section.pull-quote p  { font-size: 17px }
+	section.pull-quote blockquote.testimonial:before, section.pull-quote blockquote.testimonial:after { font-size: 72px }
+	section.pull-quote blockquote.testimonial:before { top: 28px; left: 16px }
+	section.pull-quote blockquote.testimonial:after  { right: 18px; bottom: 0px }
+	section.pull-quote.bg-dark.nyt { background:url('../img/bg-nyt-400.jpg') no-repeat center center; background-size: cover }
+
+	section.pull-quote.bg-dark.count-timer p.inner-top-banner { padding: 8px 0;line-height: 1.3; margin-top:-30px; font-size: 17px}
+	section.pull-quote.bg-dark.count-timer .countdown ul.ul-countdown { margin-left: -48px }
+	section.pull-quote.bg-dark.count-timer .countdown li { margin-left:0; font-size: 22px }
+	section.pull-quote.bg-dark.count-timer .countdown li span { font-size: 64px }
+}
+
+@media all and (min-width:480px) and (max-width:639px) {
+	section.pull-quote { padding-top: 20px; padding-bottom: 30px }
+	section.pull-quote .wrapper-regular { width: 80% }
+	section.pull-quote h4 { font-size: 24px; margin-bottom: 18px;; line-height: 1.4 }
+	section.pull-quote p  { font-size: 17px }
+	section.pull-quote blockquote.testimonial:before, section.pull-quote blockquote.testimonial:after { font-size: 72px }
+	section.pull-quote blockquote.testimonial:before { top: 28px; left: 36px }
+	section.pull-quote blockquote.testimonial:after  { right: 38px; bottom: 0px }
+
+	section.pull-quote.bg-dark.count-timer p.inner-top-banner { padding: 8px 0;line-height: 1.3; margin-top:-30px; font-size: 17px}
+	section.pull-quote.bg-dark.count-timer .countdown ul.ul-countdown { margin-left: -48px }
+	section.pull-quote.bg-dark.count-timer .countdown li { margin-left:0; font-size: 26px }
+	section.pull-quote.bg-dark.count-timer .countdown li span { font-size: 72px }
+}
+
+@media all and (min-width:640px) and (max-width:767px) {
+	section.pull-quote { padding-top: 20px; padding-bottom: 30px }
+	section.pull-quote .wrapper-regular { width: 80% }
+	section.pull-quote h4 { font-size: 30px; margin-bottom: 18px;; line-height: 1.4 }
+	section.pull-quote p  { font-size: 17px }
+	section.pull-quote blockquote.testimonial:before, section.pull-quote blockquote.testimonial:after { font-size: 84px }
+	section.pull-quote blockquote.testimonial:before { top: 28px; left: 36px }
+	section.pull-quote blockquote.testimonial:after  { right: 38px; bottom: 0px }
+
+	section.pull-quote.bg-dark.count-timer p.inner-top-banner { padding: 8px 0;line-height: 1.3; margin-top:-30px; font-size: 17px}
+	section.pull-quote.bg-dark.count-timer .countdown ul.ul-countdown { margin-left: -48px }
+	section.pull-quote.bg-dark.count-timer .countdown li { margin-left:0; font-size: 30px }
+	section.pull-quote.bg-dark.count-timer .countdown li span { font-size: 80px }
+}
+
+/* desktop */
+@media all and (min-width: 768px) {
+	section.pull-quote h4 { line-height: 1.4; font-weight: normal }
+	section.pull-quote.bg-dark.nyt { background:url('../img/bg-nyt-1200.jpg') no-repeat center center; background-size: auto }
+}
+
+@media all and (min-width:768px) and (max-width: 991px) {
+	section.pull-quote { padding-top: 28px; padding-bottom: 18px }
+	section.pull-quote .wrapper-regular { width: 90% }
+	section.pull-quote h4 { font-size:28px; margin-bottom: 18px }
+	section.pull-quote p  { font-size:20px; font-weight: bold }
+	section.pull-quote blockquote.testimonial:before, section.pull-quote blockquote.testimonial:after { font-size: 100px }
+	section.pull-quote blockquote.testimonial:before { top: 28px; left: 30px }
+	section.pull-quote blockquote.testimonial:after  { right: 32px; bottom: 0px }
+
+	section.pull-quote.bg-dark.count-timer .countdown { min-height: 180px }
+	section.pull-quote.bg-dark.count-timer p.inner-top-banner { line-height: 1.8; margin-top:-50px; font-size: 20px}
+	section.pull-quote.bg-dark.count-timer blockquote.testimonial:before, 
+	section.pull-quote.bg-dark.count-timer blockquote.testimonial:after { display: none }
+	section.pull-quote.bg-dark.count-timer .countdown li { font-size: 22px }
+	section.pull-quote.bg-dark.count-timer .countdown li span { font-size: 84px }
+}
+
+@media all and (min-width:992px) and (max-width: 1023px) {
+	section.pull-quote { padding-top: 28px; padding-bottom: 22px }
+	section.pull-quote .wrapper-regular { width: 80% }
+	section.pull-quote h4 { font-size:28px; margin-bottom: 18px }
+	section.pull-quote p  { font-size:22px; font-weight: bold }
+	section.pull-quote blockquote.testimonial:before, section.pull-quote blockquote.testimonial:after { font-size: 120px }
+	section.pull-quote blockquote.testimonial:before { top: 24px; left: 50px }
+	section.pull-quote blockquote.testimonial:after  { right: 52px; bottom: 0px }
+
+	section.pull-quote.bg-dark.count-timer .countdown { min-height: 190px }
+	section.pull-quote.bg-dark.count-timer p.inner-top-banner { line-height: 1.8; margin-top:-50px; font-size: 24px}
+	section.pull-quote.bg-dark.count-timer blockquote.testimonial:before, 
+	section.pull-quote.bg-dark.count-timer blockquote.testimonial:after { display: none }
+	section.pull-quote.bg-dark.count-timer .countdown li { font-size: 28px }
+	section.pull-quote.bg-dark.count-timer .countdown li span { font-size: 88px }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1199px) {
+	section.pull-quote { padding-top: 32px; padding-bottom: 38px }
+	section.pull-quote .wrapper-regular { width: 80% }
+	section.pull-quote h4 { font-size:30px; margin-bottom: 18px }
+	section.pull-quote p  { font-size:24px }
+	section.pull-quote blockquote.testimonial:before, section.pull-quote blockquote.testimonial:after { font-size: 130px }
+	section.pull-quote blockquote.testimonial:before { top: 28px; left: 60px }
+	section.pull-quote blockquote.testimonial:after  { right: 62px; bottom: 0px }
+
+	section.pull-quote.bg-dark.count-timer .countdown { min-height: 200px }
+	section.pull-quote.bg-dark.count-timer p.inner-top-banner { line-height: 1.8; margin-top:-50px; font-size: 26px}
+	section.pull-quote.bg-dark.count-timer blockquote.testimonial:before, 
+	section.pull-quote.bg-dark.count-timer blockquote.testimonial:after { display: none }
+	section.pull-quote.bg-dark.count-timer .countdown li { font-size: 28px }
+	section.pull-quote.bg-dark.count-timer .countdown li span { font-size: 90px }
+}
+
+@media all and (min-width: 1200px) and (max-width: 1365px) {
+	section.pull-quote.bg-dark.nyt { background:url('../img/bg-nyt-1800.jpg') no-repeat center center; background-size: auto }
+	section.pull-quote { padding-top: 38px; padding-bottom: 48px }
+	section.pull-quote .wrapper-regular { width: 76% }
+	section.pull-quote h4 { font-size:40px; margin-bottom: 18px }
+	section.pull-quote p  { font-size:28px }
+	section.pull-quote blockquote.testimonial:before, section.pull-quote blockquote.testimonial:after { font-size: 156px }
+	section.pull-quote blockquote.testimonial:before { top: 28px; left: 80px }
+	section.pull-quote blockquote.testimonial:after  { right: 82px; bottom: 0px }
+
+	section.pull-quote.bg-dark.count-timer .countdown { min-height: 220px }
+	section.pull-quote.bg-dark.count-timer p.inner-top-banner { line-height: 1.8; margin-top:-50px; font-size: 28px}
+	section.pull-quote.bg-dark.count-timer blockquote.testimonial:before, 
+	section.pull-quote.bg-dark.count-timer blockquote.testimonial:after { display: none }
+	section.pull-quote.bg-dark.count-timer .countdown li { font-size: 28px }
+	section.pull-quote.bg-dark.count-timer .countdown li span { font-size: 100px }
+}
+
+@media all and (min-width: 1366px) {
+	section.pull-quote.bg-dark.nyt { background:url('../img/bg-nyt-1800.jpg') no-repeat center center; background-size: auto }
+	section.pull-quote { padding-top: 48px; padding-bottom: 48px }
+	section.pull-quote .wrapper-regular { width: 80% }
+	section.pull-quote h4 { font-size:42px; margin-bottom: 18px }
+	section.pull-quote p  { font-size:28px }
+	section.pull-quote blockquote.testimonial:before, section.pull-quote blockquote.testimonial:after { font-size: 160px }
+	section.pull-quote blockquote.testimonial:before { top: 36px; left: 80px }
+	section.pull-quote blockquote.testimonial:after  { right: 132px; bottom: 0 }
+
+	section.pull-quote.bg-dark.count-timer p.inner-top-banner { line-height: 1.7; margin-top:-50px; font-size: 32px}
+	section.pull-quote.bg-dark.count-timer blockquote.testimonial:before, 
+	section.pull-quote.bg-dark.count-timer blockquote.testimonial:after { display: none }
+
+	section.pull-quote.bg-dark.count-timer .countdown { min-height: 240px }
+	section.pull-quote.bg-dark.count-timer .countdown li { font-size: 32px }
+	section.pull-quote.bg-dark.count-timer .countdown li span { font-size: 120px }
+}
+
+section.fbipajamas-highlights { text-align: center }
+section.fbipajamas-highlights header { text-align: center }
+section.fbipajamas-highlights header h2 { margin:0 auto; color: #000 }
+section.fbipajamas-highlights header h2 span { color: #ff0000 }
+section.fbipajamas-highlights p { margin: 0 auto 12px auto; color: #535c68; line-height: 1.5 }
+
+section.fbipajamas-highlights p a { text-decoration: none; color:#ff0000; border-bottom-style: solid; border-bottom-width: 2px  }
+section.fbipajamas-highlights p a:link,
+section.fbipajamas-highlights p a:visited { border-bottom-color:#ff0000 }
+section.fbipajamas-highlights p a:hover, 
+section.fbipajamas-highlights p a:active { border-bottom-color: #fff }
+
+/*  mobiles */
+
+@media all and (max-width:320px) {
+	section.fbipajamas-highlights { padding-top: 28px; padding-bottom: 38px }
+	section.fbipajamas-highlights header h2 { font-size: 32px; margin-bottom: 22px;width: 72%; line-height: 1  }
+	section.fbipajamas-highlights p { font-size: 16px; margin-bottom: 12px; line-height: 1.4 }
+}
+
+@media all and (min-width:321px) and (max-width:374px) {
+	section.fbipajamas-highlights { padding-top: 28px; padding-bottom: 38px }
+	section.fbipajamas-highlights header h2 { font-size: 34px; margin-bottom: 22px;width: 72%; line-height: 1  }
+	section.fbipajamas-highlights p { font-size: 16px; margin-bottom: 12px; line-height: 1.4 }
+}
+
+@media all and (min-width:375px) and (max-width:479px) {
+	section.fbipajamas-highlights { padding-top: 28px; padding-bottom: 38px }
+	section.fbipajamas-highlights header h2 { font-size: 36px; margin-bottom: 22px;width: 72%; line-height: 1  }
+	section.fbipajamas-highlights p { width: 90%; font-size: 17px; margin-bottom: 12px; line-height: 1.4 }
+}
+
+@media all and (min-width:480px) and (max-width:639px) {
+	section.fbipajamas-highlights { padding-top: 28px; padding-bottom: 38px }
+	section.fbipajamas-highlights header h2 { font-size: 42px; margin-bottom: 22px;width: 72%; line-height: 1  }
+	section.fbipajamas-highlights p { width: 80%; font-size: 17px; margin-bottom: 12px; line-height: 1.4 }
+}
+
+@media all and (min-width:640px) and (max-width:767px) {
+	section.fbipajamas-highlights { padding-top: 28px; padding-bottom: 38px }
+	section.fbipajamas-highlights header h2 { font-size: 44px; margin-bottom: 22px;width: 72%; line-height: 1  }
+	section.fbipajamas-highlights p { width: 70%; font-size: 18px; margin-bottom: 12px; line-height: 1.4 }
+}
+
+
+/* desktop */
+
+@media all and (min-width:768px) and (max-width: 991px) {
+	section.fbipajamas-highlights { padding-top: 48px; padding-bottom: 48px }
+	section.fbipajamas-highlights header h2 { font-size: 42px; margin-bottom: 22px; width: 72%; line-height: 1.1  }
+	section.fbipajamas-highlights p { font-size: 20px; width: 90%; margin-bottom: 18px }
+}
+
+@media all and (min-width:992px) and (max-width: 1023px) {
+	section.fbipajamas-highlights { padding-top: 48px; padding-bottom: 48px }
+	section.fbipajamas-highlights header h2 { font-size: 44px; margin-bottom: 26px; width: 72%; line-height: 1.1  }
+	section.fbipajamas-highlights p { font-size: 20px; width: 80%; margin-bottom: 22px }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1199px) {
+	section.fbipajamas-highlights { padding-top: 48px; padding-bottom: 48px }
+	section.fbipajamas-highlights header h2 { font-size: 46px; margin-bottom: 32px; width: 62%; line-height: 1.1  }
+	section.fbipajamas-highlights p { font-size: 22px; width: 70%; margin-bottom: 22px }
+}
+
+@media all and (min-width: 1200px) and (max-width: 1223px) {
+	section.fbipajamas-highlights { padding-top: 48px; padding-bottom: 48px }
+	section.fbipajamas-highlights header h2 { font-size: 46px; margin-bottom: 32px; width: 62%; line-height: 1.1  }
+	section.fbipajamas-highlights p { font-size: 22px; width: 70%; margin-bottom: 22px }
+}
+
+@media all and (min-width: 1224px) and (max-width: 1279px) {
+	section.fbipajamas-highlights { padding-top: 48px; padding-bottom: 48px }
+	section.fbipajamas-highlights header h2 { font-size: 48px; margin-bottom: 32px; width: 62%; line-height: 1.1  }
+	section.fbipajamas-highlights p { font-size: 22px; width: 70%; margin-bottom: 22px }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1365px) {
+	section.fbipajamas-highlights { padding-top: 48px; padding-bottom: 48px }
+	section.fbipajamas-highlights header h2 { font-size: 54px; margin-bottom: 32px; width: 62%; line-height: 1.1  }
+	section.fbipajamas-highlights p { font-size: 22px; width: 70%; margin-bottom: 22px }
+}
+
+@media all and (min-width: 1366px) {
+	section.fbipajamas-highlights { padding-top: 48px; padding-bottom: 48px }
+	section.fbipajamas-highlights header h2 { font-size: 60px; margin-bottom: 42px;width: 72%; line-height: 1.1  }
+	section.fbipajamas-highlights p { font-size: 22px; width: 80%; margin-bottom: 24px }
+}
+
+/* ====== ALSO INSIDE ===========*/
+
+section.fbipajamas-also-inside { background: #f5f1ed }
+section.fbipajamas-also-inside header { text-align: center }
+section.fbipajamas-also-inside header h2 {  color: #ff0000; margin: 0 auto; font-weight: bold }
+section.fbipajamas-also-inside p.intro { text-align: center; margin: 0 auto; color: #000 }
+section.fbipajamas-also-inside .flex-col.col-3 h3, 
+section.fbipajamas-also-inside .flex-col.col-3 p  { color: #000 }
+section.fbipajamas-also-inside p { margin: 0 0 12px 0; color: #535c68 }
+section.fbipajamas-also-inside p a { text-decoration: none; color:#ff0000; border-bottom-style: solid; border-bottom-width: 2px  }
+section.fbipajamas-also-inside p a:link,
+section.fbipajamas-also-inside p a:visited { border-bottom-color:#ff0000 }
+section.fbipajamas-also-inside p a:hover, 
+section.fbipajamas-also-inside p a:active { border-bottom-color: #fff }
+
+/* ======= mobiles ======== */
+
+@media all and (max-width:767px) {
+	section.fbipajamas-also-inside .flex-grid { flex-direction: column }
+	section.fbipajamas-also-inside header h2 { line-height: 1.1 }
+}
+
+@media all and (max-width:320px) {
+	section.fbipajamas-also-inside { padding-top: 28px; padding-bottom: 32px }
+	section.fbipajamas-also-inside header h2 { font-size:24px; margin-bottom: 20px }
+	section.fbipajamas-also-inside .flex-col.col-3 img { margin-bottom:0 }
+	section.fbipajamas-also-inside .flex-col.col-3 h3 { font-size:18px; margin-top: 20px; margin-bottom: 8px }
+	section.fbipajamas-also-inside .flex-col.col-3 p  { font-size:14px }
+}
+
+@media all and (min-width:321px) and (max-width:374px) {
+	section.fbipajamas-also-inside { padding-top: 28px; padding-bottom: 32px }
+	section.fbipajamas-also-inside header h2 { font-size:25px; margin-bottom: 20px }
+	section.fbipajamas-also-inside .flex-col.col-3 img { margin-bottom:0 }
+	section.fbipajamas-also-inside .flex-col.col-3 h3 { font-size:18px; margin-top: 20px; margin-bottom: 8px }
+	section.fbipajamas-also-inside .flex-col.col-3 p  { font-size:14px }
+}
+
+@media all and (min-width:375px) and (max-width:479px) {
+	section.fbipajamas-also-inside { padding-top: 28px; padding-bottom: 32px }
+	section.fbipajamas-also-inside header h2 { font-size:26px; width:80%; margin-bottom: 20px }
+	section.fbipajamas-also-inside .flex-col.col-3 img { margin-bottom:0 }
+	section.fbipajamas-also-inside .flex-col.col-3 h3 { font-size:20px; margin-top: 20px; margin-bottom: 8px }
+	section.fbipajamas-also-inside .flex-col.col-3 p  { font-size:15px }
+}
+
+@media all and (min-width:480px) and (max-width:639px) {
+	section.fbipajamas-also-inside { padding-top: 32px; padding-bottom: 32px }
+	section.fbipajamas-also-inside header h2 { font-size:30px; width:80%; margin-bottom: 20px }
+	section.fbipajamas-also-inside .flex-col.col-3 img { margin-bottom:0 }
+	section.fbipajamas-also-inside .flex-col.col-3 h3 { font-size:20px; margin-top: 24px; margin-bottom: 8px }
+	section.fbipajamas-also-inside .flex-col.col-3 p  { font-size:15px }
+}
+
+@media all and (min-width:640px) and (max-width:767px) {
+	section.fbipajamas-also-inside { padding-top: 36px; padding-bottom: 32px }
+	section.fbipajamas-also-inside header h2 { font-size:30px; width:80%; margin-bottom: 20px }
+	section.fbipajamas-also-inside .flex-col.col-3 img { margin-bottom:0 }
+	section.fbipajamas-also-inside .flex-col.col-3 h3 { font-size:20px; margin-top: 24px; margin-bottom: 8px }
+	section.fbipajamas-also-inside .flex-col.col-3 p  { font-size:15px }
+}
+
+/* ======= desktop ======== */
+
+@media all and (min-width:768px) and (max-width: 991px) {
+	section.fbipajamas-also-inside { padding-top: 28px; padding-bottom: 32px }
+	section.fbipajamas-also-inside header h2 { font-size: 40px; margin-bottom: 22px; line-height:1.1; width:70% }
+	section.fbipajamas-also-inside p.intro { font-size: 20px; margin-bottom: 24px; width: 96% }
+	section.fbipajamas-also-inside .flex-col.col-3 img { margin-bottom:12px }
+	section.fbipajamas-also-inside .flex-col.col-3 h3 { font-size:18px; margin-bottom: 8px }
+	section.fbipajamas-also-inside .flex-col.col-3 p  { font-size:15px }
+}
+
+@media all and (min-width:992px) and (max-width: 1023px) {
+	section.fbipajamas-also-inside { padding-top: 28px; padding-bottom: 32px }
+	section.fbipajamas-also-inside header h2 { font-size: 44px; margin-bottom: 22px; line-height:1.1; width:60% }
+	section.fbipajamas-also-inside p.intro { font-size: 24px; margin-bottom: 24px; width: 84% }
+	section.fbipajamas-also-inside .flex-col.col-3 img { margin-bottom:12px }
+	section.fbipajamas-also-inside .flex-col.col-3 h3 { font-size:20px; margin-bottom: 8px }
+	section.fbipajamas-also-inside .flex-col.col-3 p  { font-size:15px }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1199px) {
+	section.fbipajamas-also-inside { padding-top: 38px; padding-bottom: 42px }
+	section.fbipajamas-also-inside header h2 { font-size: 48px; margin-bottom: 24px; line-height:1.1; width:60% }
+	section.fbipajamas-also-inside p.intro { font-size: 24px; margin-bottom: 24px; width: 86% }
+	section.fbipajamas-also-inside .flex-col.col-3 img { margin-bottom:12px }
+	section.fbipajamas-also-inside .flex-col.col-3 h3 { font-size:20px; margin-bottom: 8px; min-height:46px }
+	section.fbipajamas-also-inside .flex-col.col-3 p  { font-size:15px }
+}
+
+@media all and (min-width: 1200px) and (max-width: 1223px) {
+	section.fbipajamas-also-inside { padding-top: 38px; padding-bottom: 42px }
+	section.fbipajamas-also-inside header h2 { font-size: 50px; margin-bottom: 22px; line-height:1.1; width:50% }
+	section.fbipajamas-also-inside p.intro { font-size: 24px; margin-bottom: 24px; width: 88% }
+	section.fbipajamas-also-inside .flex-col.col-3 img { margin-bottom:12px }
+	section.fbipajamas-also-inside .flex-col.col-3 h3 { font-size:20px; margin-bottom: 8px }
+	section.fbipajamas-also-inside .flex-col.col-3 p  { font-size:15px }
+}
+
+@media all and (min-width: 1224px) and (max-width: 1279px) {
+	section.fbipajamas-also-inside { padding-top: 38px; padding-bottom: 42px }
+	section.fbipajamas-also-inside header h2 { font-size: 50px; margin-bottom: 22px; line-height:1.1; width:50% }
+	section.fbipajamas-also-inside p.intro { font-size: 24px; margin-bottom: 24px; width: 90% }
+	section.fbipajamas-also-inside .flex-col.col-3 img { margin-bottom:12px }
+	section.fbipajamas-also-inside .flex-col.col-3 h3 { font-size:22px; margin-bottom: 8px }
+	section.fbipajamas-also-inside .flex-col.col-3 p  { font-size:16px }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1365px) {
+	section.fbipajamas-also-inside { padding-top: 38px; padding-bottom: 42px }
+	section.fbipajamas-also-inside header h2 { font-size: 50px; margin-bottom: 22px; line-height:1.1; width:50% }
+	section.fbipajamas-also-inside p.intro { font-size: 24px; margin-bottom: 26px; width: 90% }
+	section.fbipajamas-also-inside .flex-col.col-3 img { margin-bottom:12px }
+	section.fbipajamas-also-inside .flex-col.col-3 h3 { font-size:22px; margin-bottom: 8px }
+	section.fbipajamas-also-inside .flex-col.col-3 p  { font-size:16px }
+}
+
+@media all and (min-width: 1366px) {
+	section.fbipajamas-also-inside { padding-top: 38px; padding-bottom: 42px }
+	section.fbipajamas-also-inside header h2 { font-size: 54px; margin-bottom: 24px }
+	section.fbipajamas-also-inside p.intro { font-size: 24px; margin-bottom: 26px; width: 70% }
+	section.fbipajamas-also-inside .flex-col.col-3 img { margin-bottom:12px }
+	section.fbipajamas-also-inside .flex-col.col-3 h3 { font-size:23px; margin-bottom: 10px }
+	section.fbipajamas-also-inside .flex-col.col-3 p  { font-size:16px }
+}
+
+
+/* ====== INTERVIEWS ===========*/
+
+section.thomas-paine-video-interviews { background: #fff }
+section.thomas-paine-video-interviews header { text-align: center }
+section.thomas-paine-video-interviews header h2 { color: #ff0000; margin: 0 auto; font-weight: bold }
+section.thomas-paine-video-interviews .flex-col.col-2 h3 { color: #000 }
+section.thomas-paine-video-interviews p { margin: 0 0 12px 0; color: #535c68 }
+section.thomas-paine-video-interviews p a { text-decoration: none; color:#ff0000; border-bottom-style: solid; border-bottom-width: 2px }
+section.thomas-paine-video-interviews p a:link,
+section.thomas-paine-video-interviews p a:visited { border-bottom-color:#ff0000 }
+section.thomas-paine-video-interviews p a:hover, 
+section.thomas-paine-video-interviews p a:active { border-bottom-color: #fff }
+
+section.thomas-paine-video-interviews .videoWrapper { position: relative; padding-bottom: 56.25%; /* 16:9 */ padding-top: 25px; height: 0 }
+section.thomas-paine-video-interviews .videoWrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100% }
+
+/* mobiles */
+@media all and (max-width:767px) {
+	section.thomas-paine-video-interviews .flex-grid { flex-direction: column }
+	section.thomas-paine-video-interviews header h2 { line-height: 1.1 }
+}
+
+@media all and (max-width:320px) {
+	section.thomas-paine-video-interviews { padding-top: 28px; padding-bottom: 18px }
+	section.thomas-paine-video-interviews header h2 { font-size: 24px; line-height: 1.1; margin-bottom: 32px  }
+	section.thomas-paine-video-interviews h3 { font-size:15px; margin-bottom: 4px }
+	section.thomas-paine-video-interviews p  { font-size:14px }
+	section.thomas-paine-video-interviews .videoWrapper { margin: 12px 0 }
+}
+
+@media all and (min-width:321px) and (max-width:374px) {
+	section.thomas-paine-video-interviews { padding-top: 28px; padding-bottom: 24px }
+	section.thomas-paine-video-interviews header h2 { font-size: 26px; line-height: 1.1; margin-bottom: 32px  }
+	section.thomas-paine-video-interviews h3 { font-size:16px; margin-top: 6px;margin-bottom: 4px }
+	section.thomas-paine-video-interviews p  { font-size:14px }
+	section.thomas-paine-video-interviews .videoWrapper { margin: 14px 0 }
+}
+
+@media all and (min-width:375px) and (max-width:479px) {
+	section.thomas-paine-video-interviews { padding-top: 28px; padding-bottom: 28px }
+	section.thomas-paine-video-interviews header h2 { font-size: 26px; line-height: 1.1; margin-bottom: 32px  }
+	section.thomas-paine-video-interviews h3 { font-size:18px; margin-top: 10px; margin-bottom: 4px }
+	section.thomas-paine-video-interviews p  { font-size:15px; line-height:1.4 }
+	section.thomas-paine-video-interviews .videoWrapper { margin: 24px 0 }
+}
+
+@media all and (min-width:480px) and (max-width:639px) {
+	section.thomas-paine-video-interviews { padding-top: 28px; padding-bottom: 28px }
+	section.thomas-paine-video-interviews header h2 { font-size: 26px; line-height: 1.1; margin-bottom: 32px  }
+	section.thomas-paine-video-interviews h3 { font-size:19px; margin-top: 10px; margin-bottom: 4px }
+	section.thomas-paine-video-interviews p  { font-size:16px; line-height:1.4 }
+	section.thomas-paine-video-interviews .videoWrapper { margin: 24px 0 }
+}
+
+@media all and (min-width:640px) and (max-width:767px) {
+	section.thomas-paine-video-interviews { padding-top: 28px; padding-bottom: 28px }
+	section.thomas-paine-video-interviews header h2 { font-size: 26px; line-height: 1.1; margin-bottom: 32px  }
+	section.thomas-paine-video-interviews h3 { font-size:20px; margin-top: 10px; margin-bottom: 4px }
+	section.thomas-paine-video-interviews p  { font-size:16px; line-height:1.4 }
+	section.thomas-paine-video-interviews .videoWrapper { margin: 24px 0 }
+}
+
+/* desktop */
+@media screen and (min-width: 768px) {
+	section.thomas-paine-video-interviews h3 { line-height: 1.1; font-weight: bold; margin: 0  }
+	section.thomas-paine-video-interviews p { margin: 0 0 12px 0 }
+}
+
+@media all and (min-width:768px) and (max-width: 991px) {
+	section.thomas-paine-video-interviews { padding-top: 28px; padding-bottom: 28px }
+	section.thomas-paine-video-interviews header h2 { font-size: 34px; line-height: 1.1; margin-bottom: 32px  }
+	section.thomas-paine-video-interviews h3 { font-size:16px; margin-bottom: 4px }
+	section.thomas-paine-video-interviews p  { font-size:15px }
+	section.thomas-paine-video-interviews .videoWrapper { margin: 6px 0 }
+}
+
+@media all and (min-width:992px) and (max-width: 1023px) {
+	section.thomas-paine-video-interviews { padding-top: 32px; padding-bottom: 32px }
+	section.thomas-paine-video-interviews header h2 { font-size: 40px; line-height: 1.1; margin-bottom: 32px  }
+	section.thomas-paine-video-interviews h3 { font-size:18px; margin-bottom: 4px }
+	section.thomas-paine-video-interviews p  { font-size:15px }
+	section.thomas-paine-video-interviews .videoWrapper { margin: 20px 0 }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1199px) {
+	section.thomas-paine-video-interviews { padding-top: 32px; padding-bottom: 32px }
+	section.thomas-paine-video-interviews header h2 { font-size: 40px; line-height: 1.1; margin-bottom: 32px  }
+	section.thomas-paine-video-interviews h3 { font-size:18px; margin-bottom: 4px }
+	section.thomas-paine-video-interviews p  { font-size:15px; line-height: 1.4 }
+	section.thomas-paine-video-interviews .videoWrapper { margin: 20px 0 }
+}
+
+@media all and (min-width: 1200px) and (max-width: 1279px) {
+	section.thomas-paine-video-interviews { padding-top: 38px; padding-bottom: 42px }
+	section.thomas-paine-video-interviews header h2 { font-size: 48px; line-height: 1.1; margin-bottom: 32px  }
+	section.thomas-paine-video-interviews h3 { font-size:20px; margin-bottom: 4px }
+	section.thomas-paine-video-interviews p  { font-size:16px; line-height: 1.4 }
+	section.thomas-paine-video-interviews .videoWrapper { margin: 20px 0 }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1365px) {
+	section.thomas-paine-video-interviews { padding-top: 38px; padding-bottom: 42px }
+	section.thomas-paine-video-interviews header h2 { font-size: 52px; line-height: 1.1; margin-bottom: 32px  }
+	section.thomas-paine-video-interviews h3 { font-size:20px; margin-bottom: 4px }
+	section.thomas-paine-video-interviews p  { font-size:16px; line-height: 1.4 }
+	section.thomas-paine-video-interviews .videoWrapper { margin: 20px 0 }
+}
+
+@media all and (min-width: 1366px) {
+	section.thomas-paine-video-interviews { padding-top: 48px; padding-bottom: 54px }
+	section.thomas-paine-video-interviews header h2 { font-size: 54px; margin-bottom: 32px  }
+	section.thomas-paine-video-interviews h3 { font-size:20px; margin-bottom: 4px }
+	section.thomas-paine-video-interviews p  { font-size:16px; line-height: 1.4 }
+	section.thomas-paine-video-interviews .videoWrapper { margin: 20px 0 }
+}
+
+/* ====== BUY BOOK BLOCK ===========*/
+
+section.fbipajamas-buy-block { background: #fff }
+section.fbipajamas-buy-block header { text-align: center }
+section.fbipajamas-buy-block header h2 { color: #000; margin: 0 auto; font-weight: bold }
+section.fbipajamas-buy-block .flex-col.col-2 h3, 
+section.fbipajamas-buy-block .flex-col.col-2 p { color: #000; margin-top: 0 }
+
+section.fbipajamas-buy-block p a { text-decoration: none; color:#ff0000; border-bottom-style: solid; border-bottom-width: 2px  }
+section.fbipajamas-buy-block p a:link,
+section.fbipajamas-buy-block p a:visited { border-bottom-color:#ff0000 }
+section.fbipajamas-buy-block p a:hover, 
+section.fbipajamas-buy-block p a:active { border-bottom-color: #fff }
+
+section.fbipajamas-buy-block .buy-book-wrapper { width: 100%; clear:both }
+section.fbipajamas-buy-block .buy-book-wrapper h4 { margin: 0 auto; color: #455A64 }
+section.fbipajamas-buy-block .buy-book-wrapper img { display: block; margin:0 auto; text-align:center }
+
+section.fbipajamas-buy-block .buy-book-wrapper .pback,
+section.fbipajamas-buy-block .buy-book-wrapper .kindle { 
+	border: solid 1px #ccc; text-align: center; background:#fff;
+	border-radius:12px; box-shadow: 0 3px 5px 6px #ccc;
+	box-shadow: 10px 10px 5px #ccc;
+
+}
+section.fbipajamas-buy-block .buy-book-wrapper .pback { float: left }
+section.fbipajamas-buy-block .buy-book-wrapper .kindle { float: right }
+
+section.fbipajamas-buy-block .buy-book-wrapper a { 
+	text-decoration: none; display: inline-block; background: #ff0000; color:#fff; font-weight: bold;border-radius: 5px  }
+section.fbipajamas-buy-block .buy-book-wrapper a:link,
+section.fbipajamas-buy-block .buy-book-wrapper a:visited { border-color:#ff0000 }
+section.fbipajamas-buy-block .buy-book-wrapper a:hover, 
+section.fbipajamas-buy-block .buy-book-wrapper a:active { background: rgb(221,0,0) }
+
+/* mobiles */
+@media all and (max-width:767px) {
+	section.fbipajamas-buy-block .flex-grid { flex-direction: column }
+	section.fbipajamas-buy-block header h2 { line-height: 1.1; margin:0 auto }
+	section.fbipajamas-buy-block .flex-grid {text-align: center}
+	section.fbipajamas-buy-block .flex-col.col-2 p { margin:0 auto }
+}
+
+@media all and (max-width:320px) {
+	section.fbipajamas-buy-block { padding-top: 28px; padding-bottom: 42px }
+	section.fbipajamas-buy-block header h2 { font-size: 24px; margin-bottom: 12px }
+	section.fbipajamas-buy-block .flex-col.col-2 p { font-size: 14px; margin: 12px auto 6px auto }
+	section.fbipajamas-buy-block .buy-book-wrapper { margin-top:22px }
+	section.fbipajamas-buy-block .buy-book-wrapper h4 { font-size: 16px; margin-bottom: 16px }
+	section.fbipajamas-buy-block .buy-book-wrapper img { max-width: 90px }
+	section.fbipajamas-buy-block .buy-book-wrapper .pback,
+	section.fbipajamas-buy-block .buy-book-wrapper .kindle { width: 42%; padding: 8px 0 12px 0 }
+	section.fbipajamas-buy-block .buy-book-wrapper a span { display: none }
+	section.fbipajamas-buy-block .buy-book-wrapper a { font-size: 14px; padding: 8px 18px; margin-top:12px }
+}
+
+@media all and (min-width:321px) and (max-width:374px) {
+	section.fbipajamas-buy-block { padding-top: 28px; padding-bottom: 48px }
+	section.fbipajamas-buy-block header h2 { font-size: 24px; margin-bottom: 12px }
+	section.fbipajamas-buy-block .flex-col.col-2 p { font-size: 15px; margin-top: 12px; margin-bottom: 6px; line-height:1.3 }
+	section.fbipajamas-buy-block .buy-book-wrapper { margin-top:22px }
+	section.fbipajamas-buy-block .buy-book-wrapper h4 { font-size: 18px; margin-bottom: 16px }
+	section.fbipajamas-buy-block .buy-book-wrapper img { max-width: 90px }
+	section.fbipajamas-buy-block .buy-book-wrapper .pback,
+	section.fbipajamas-buy-block .buy-book-wrapper .kindle { width: 44%; padding: 8px 0 12px 0 }
+	section.fbipajamas-buy-block .buy-book-wrapper a span { display: none }
+	section.fbipajamas-buy-block .buy-book-wrapper a { font-size: 16px; padding: 8px 12px; margin-top:12px }
+}
+
+@media all and (min-width:375px) and (max-width:479px) {
+	section.fbipajamas-buy-block { padding-top: 28px; padding-bottom: 52px }
+	section.fbipajamas-buy-block header h2 { font-size: 26px; margin-bottom: 12px }
+	section.fbipajamas-buy-block .flex-col.col-2 p { font-size: 15px; margin-top: 12px; margin-bottom: 6px }
+	section.fbipajamas-buy-block .flex-col.col-2:first-child { text-align: center }
+	section.fbipajamas-buy-block .flex-col.col-2 img.img-fluid { text-align: center; width: 90%; margin:0 auto }
+
+	section.fbipajamas-buy-block .buy-book-wrapper { margin-top:32px }
+	section.fbipajamas-buy-block .buy-book-wrapper h4 { font-size: 18px; margin-bottom: 16px }
+	section.fbipajamas-buy-block .buy-book-wrapper img { max-width: 100px }
+	section.fbipajamas-buy-block .buy-book-wrapper .pback,
+	section.fbipajamas-buy-block .buy-book-wrapper .kindle { width: 42%; padding: 8px 0 12px 0 }
+	section.fbipajamas-buy-block .buy-book-wrapper a span { display: none }
+	section.fbipajamas-buy-block .buy-book-wrapper a { font-size: 16px; padding: 8px 12px; margin-top:12px }
+}
+
+@media all and (min-width:480px) and (max-width:639px) {
+	section.fbipajamas-buy-block { padding-top: 28px; padding-bottom: 52px }
+	section.fbipajamas-buy-block header h2 { font-size: 34px; margin-bottom: 20px; width:80% }
+	section.fbipajamas-buy-block .flex-col.col-2:first-child { text-align: center }
+	section.fbipajamas-buy-block .flex-col.col-2 img.img-fluid { text-align: center; width: 80%; margin:0 auto }
+
+	section.fbipajamas-buy-block .flex-col.col-2 p { font-size: 17px; margin-top: 12px; margin-bottom: 6px }
+	section.fbipajamas-buy-block .buy-book-wrapper { margin-top:22px }
+	section.fbipajamas-buy-block .buy-book-wrapper h4 { font-size: 18px; margin-bottom: 16px }
+	section.fbipajamas-buy-block .buy-book-wrapper img { max-width: 110px }
+	section.fbipajamas-buy-block .buy-book-wrapper .pback,
+	section.fbipajamas-buy-block .buy-book-wrapper .kindle { width: 40%; padding: 8px 0 12px 0 }
+	section.fbipajamas-buy-block .buy-book-wrapper a span { display: none }
+	section.fbipajamas-buy-block .buy-book-wrapper a { font-size: 16px; padding: 8px 12px; margin-top:12px }
+}
+
+@media all and (min-width:640px) and (max-width:767px) {
+	section.fbipajamas-buy-block { padding-top: 28px; padding-bottom: 54px }
+	section.fbipajamas-buy-block header h2 { font-size: 36px; margin-bottom: 20px }
+	section.fbipajamas-buy-block .flex-col.col-2:first-child { text-align: center }
+	section.fbipajamas-buy-block .flex-col.col-2 img.img-fluid { text-align: center; width: 70%; margin:0 auto }
+
+	section.fbipajamas-buy-block .flex-col.col-2 p { font-size: 17px; margin-top: 12px; margin-bottom: 6px }
+	section.fbipajamas-buy-block .buy-book-wrapper { margin-top:32px }
+	section.fbipajamas-buy-block .buy-book-wrapper h4 { font-size: 18px; margin-bottom: 16px }
+	section.fbipajamas-buy-block .buy-book-wrapper img { max-width: 130px }
+	section.fbipajamas-buy-block .buy-book-wrapper .pback,
+	section.fbipajamas-buy-block .buy-book-wrapper .kindle { width: 40%; padding: 8px 0 12px 0 }
+	section.fbipajamas-buy-block .buy-book-wrapper a { font-size: 18px; padding: 8px 20px; margin-top:12px }
+}
+
+/* desktop */
+@media all and (min-width:768px) and (max-width: 991px) {
+	section.fbipajamas-buy-block { padding-top: 28px; padding-bottom: 32px }
+	section.fbipajamas-buy-block header h2 { font-size: 34px; margin-bottom: 22px  }
+	section.fbipajamas-buy-block .flex-col.col-2 p { font-size: 16px; margin-bottom: 6px }
+	section.fbipajamas-buy-block .buy-book-wrapper { margin-top:12px }
+	section.fbipajamas-buy-block .buy-book-wrapper h4 { font-size: 18px; margin-bottom: 16px }
+	section.fbipajamas-buy-block .buy-book-wrapper a span { display: none }
+	section.fbipajamas-buy-block .buy-book-wrapper img { max-width: 90px }
+	section.fbipajamas-buy-block .buy-book-wrapper .pback,
+	section.fbipajamas-buy-block .buy-book-wrapper .kindle { width: 44%; padding: 8px 0 12px 0 }
+	section.fbipajamas-buy-block .buy-book-wrapper a { font-size: 17px; padding: 8px 22px; margin-top:12px }
+}
+
+@media all and (min-width:992px) and (max-width: 1023px) {
+	section.fbipajamas-buy-block { padding-top: 28px; padding-bottom: 52px }
+	section.fbipajamas-buy-block header h2 { font-size: 38px; margin-bottom: 22px  }
+	section.fbipajamas-buy-block .flex-col.col-2 p { font-size: 17px; margin-bottom: 10px }
+	section.fbipajamas-buy-block .buy-book-wrapper { margin-top:22px }
+	section.fbipajamas-buy-block .buy-book-wrapper h4 { font-size: 18px; margin-bottom: 16px }
+	section.fbipajamas-buy-block .buy-book-wrapper img { max-width: 120px }
+	section.fbipajamas-buy-block .buy-book-wrapper a span { display: none }
+	section.fbipajamas-buy-block .buy-book-wrapper .pback,
+	section.fbipajamas-buy-block .buy-book-wrapper .kindle { width: 42%; padding: 8px 0 12px 0 }
+	section.fbipajamas-buy-block .buy-book-wrapper a { font-size: 17px; padding: 8px 22px; margin-top:12px }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1199px) {
+	section.fbipajamas-buy-block { padding-top: 34px; padding-bottom: 60px }
+	section.fbipajamas-buy-block header h2 { font-size: 40px; margin-bottom: 22px  }
+	section.fbipajamas-buy-block .flex-col.col-2 p { font-size: 17px; margin-bottom: 12px }
+	section.fbipajamas-buy-block .buy-book-wrapper { margin-top:22px }
+	section.fbipajamas-buy-block .buy-book-wrapper h4 { font-size: 18px; margin-bottom: 16px }
+	section.fbipajamas-buy-block .buy-book-wrapper img { max-width: 130px }
+	section.fbipajamas-buy-block .buy-book-wrapper a span { display: none }
+	section.fbipajamas-buy-block .buy-book-wrapper .pback,
+	section.fbipajamas-buy-block .buy-book-wrapper .kindle { width: 42%; padding: 10px 0 14px 0 }
+	section.fbipajamas-buy-block .buy-book-wrapper a { font-size: 18px; padding: 8px 15px; margin-top:12px }
+}
+
+@media all and (min-width: 1200px) and (max-width: 1365px) {
+	section.fbipajamas-buy-block { padding-top: 42px; padding-bottom: 68px }
+	section.fbipajamas-buy-block header h2 { font-size: 48px; margin-bottom: 32px  }
+	section.fbipajamas-buy-block .flex-col.col-2 p { font-size: 18px; margin-bottom: 12px }
+	section.fbipajamas-buy-block .buy-book-wrapper { margin-top:22px }
+	section.fbipajamas-buy-block .buy-book-wrapper h4 { font-size: 20px; margin-bottom: 16px }
+	section.fbipajamas-buy-block .buy-book-wrapper img { max-width: 140px }
+	section.fbipajamas-buy-block .buy-book-wrapper .pback,
+	section.fbipajamas-buy-block .buy-book-wrapper .kindle { width: 42%; padding: 14px 0 22px 0 }
+	section.fbipajamas-buy-block .buy-book-wrapper a { font-size: 20px; padding: 8px 22px; margin-top:16px }
+}
+
+@media all and (min-width: 1366px) {
+	section.fbipajamas-buy-block { padding: 38px 0 72px 0 }
+	section.fbipajamas-buy-block header h2 { font-size: 54px; margin-bottom: 32px  }
+	section.fbipajamas-buy-block .flex-col.col-2 p { font-size: 19px }
+	section.fbipajamas-buy-block .buy-book-wrapper { margin-top:32px }
+	section.fbipajamas-buy-block .buy-book-wrapper h4 { font-size: 22px; margin-bottom: 16px }
+	section.fbipajamas-buy-block .buy-book-wrapper img { max-width: 140px }
+	section.fbipajamas-buy-block .buy-book-wrapper .pback,
+	section.fbipajamas-buy-block .buy-book-wrapper .kindle { width: 42%; padding: 14px 0 22px 0 }
+	section.fbipajamas-buy-block .buy-book-wrapper a { font-size: 20px; padding: 8px 32px; margin-top:16px }
+}
+
+
+/* ====== FOOTER ===========*/
+
+.truepundit-footer { background:#ff0000; margin: 0 auto; text-align: left; color: #fff }
+.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 h3 { text-transform: uppercase; letter-spacing: 1px }
+.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p { margin: 0 0 12px 0 }
+.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p a,
+.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li a { 
+	color: #fff; text-decoration: none; border-bottom-style: solid; border-bottom-width: 2px
+}
+
+.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 a:link, 
+.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 a:visited { border-bottom-color: #fff }
+.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 a:hover, 
+.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 a:active { border-bottom-color: #ff0000 }
+
+
+/* ======= mobiles ======== */
+
+@media all and (min-width:640px) and (max-width:767px) {
+	.truepundit-footer .wrapper-regular .flex-grid { flex-direction: column }
+}
+
+@media all and (max-width:320px) {
+	.truepundit-footer { padding: 10px 0 26px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 h3 { margin: 24px 0 1px 0; font-size:18px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p { font-size:15px; margin-bottom: 12px; line-height: 1.4  }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 ul.fa-ul { margin-left: 24px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { font-size:16px; margin: -8px 0 20px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 .img-fluid { margin: 4px 0 4px 0; width: 80% }
+}
+
+@media all and (min-width:321px) and (max-width:479px) {
+	.truepundit-footer { padding: 14px 0 26px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 h3 { margin: 24px 0 1px 0; font-size:18px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p { font-size:15px; margin-bottom: 12px; line-height: 1.4  }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 ul.fa-ul { margin-left: 24px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { font-size:16px; margin: -8px 0 24px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 .img-fluid { margin: 4px 0 4px 0; width: 70% }
+}
+
+@media all and (min-width:480px) and (max-width:639px) {
+	.truepundit-footer { padding: 16px 0 26px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 h3 { margin: 24px 0 1px 0; font-size:18px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p { font-size:15px; margin-bottom: 12px; line-height: 1.4 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 ul.fa-ul { margin-left: 24px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { font-size:16px; margin: -8px 0 24px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 .img-fluid { margin: 4px 0 4px 0; width: 60% }
+}
+
+@media all and (min-width:640px) and (max-width:767px) {
+	.truepundit-footer { padding: 16px 0 26px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 h3 { margin: 24px 0 1px 0; font-size:18px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p { font-size:15px; margin-bottom: 12px; line-height: 1.4 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 ul.fa-ul { margin-left: 24px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { font-size:16px; margin: -8px 0 24px 0; line-height: 1.4 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 .img-fluid { margin: 4px 0 4px 0; width: 50% }
+}
+
+
+/* ======= desktop ======== */
+@media screen and (min-width: 768px) { .truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p { line-height: 1.4 } }
+
+@media all and (min-width:768px) and (max-width: 991px) {
+	.truepundit-footer { padding: 32px 0 40px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 h3 { margin-bottom: 4px; font-size:16px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p,
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { font-size:14px; margin-bottom: 10px  }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 ul.fa-ul { margin-left: 24px; margin-top: 8px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 .img-fluid { margin: 4px 0 4px 0; width: 100% }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { margin-bottom: 16px; line-height: 1.4 }
+}
+
+@media all and (min-width:992px) and (max-width: 1023px) {
+	.truepundit-footer { padding: 32px 0 40px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 h3 { margin-bottom: 4px; font-size:16px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p,
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { font-size:15px; margin-bottom: 10px  }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 ul.fa-ul { margin-left: 24px; margin-top: 8px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 .img-fluid { margin: 4px 0 4px 0; width: 100% }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { margin-bottom: 16px }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1199px) {
+	.truepundit-footer { padding: 32px 0 40px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 h3 { margin-bottom: 4px; font-size:16px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p,
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { font-size:15px; margin-bottom: 10px  }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 ul.fa-ul { margin-left: 24px; margin-top:2px}
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 .img-fluid { margin: 4px 0 4px 0; width: 90% }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { margin-bottom: 14px }
+}
+
+@media all and (min-width: 1200px) and (max-width: 1223px) {
+	.truepundit-footer { padding: 32px 0 40px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 h3 { margin-bottom: 4px; font-size:18px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p,
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { font-size:15px; margin-bottom: 10px  }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 ul.fa-ul { margin-left: 24px; margin-top:2px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 .img-fluid { margin: 4px 0 4px 0; width: 78% }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { margin-bottom: 14px }
+}
+
+@media all and (min-width: 1224px) and (max-width: 1279px) {
+	.truepundit-footer { padding: 32px 0 40px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 h3 { margin-bottom: 4px; font-size:19px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p,
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { font-size:15px; margin-bottom: 10px  }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 ul.fa-ul { margin-left: 24px; margin-top:2px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 .img-fluid { margin: 4px 0 4px 0; width: 82% }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { margin-bottom: 14px }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1365px) {
+	.truepundit-footer { padding: 32px 0 40px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 h3 { margin-bottom: 4px; font-size:20px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p,
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { font-size:16px; margin-bottom: 10px  }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 ul.fa-ul { margin-left: 24px; margin-top:2px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 .img-fluid { margin: 4px 0 4px 0; width: 82% }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { margin-bottom: 14px  }
+}
+
+@media all and (min-width: 1366px) {
+	.truepundit-footer { padding: 32px 0 40px 0 }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 h3 { margin-bottom: 4px; font-size:20px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 p,
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 li { font-size:16px; margin-bottom: 12px }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 ul.fa-ul { margin-left: 26px; margin-top:-2px; }
+	.truepundit-footer .wrapper-regular .flex-grid .flex-col.col-4 .img-fluid { margin: 4px 0 4px 0; width: 70% }
+}
