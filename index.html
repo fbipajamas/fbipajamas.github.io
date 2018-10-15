@@ -84,7 +84,14 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/fbi-pajamas-book-style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet"> 
+	<style>
+		body::after {
+			position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+			content:url(img/bg-brennan-400.jpg) url(img/bg-brennan-1800.jpg) url(img/bg-whitehouse-red.jpg);
+		}
+	</style>
 
 	<script>
 	const second = 1000,
