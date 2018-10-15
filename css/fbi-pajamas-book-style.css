@@ -502,9 +502,8 @@ section.pull-quote.bg-dark.count-timer p.inner-top-banner { width:100%; color: #
 
 /* mobiles */
 @media all and (max-width:767px) {
-	section.pull-quote.bg-dark count-timer { background:url('../img/bg-brennan-1200.jpg')   no-repeat center center; background-size: cover }
 	section.pull-quote.bg-dark.whitehouse  { background:url('../img/bg-whitehouse-red.jpg') no-repeat center center; background-size: cover }
-	section.pull-quote.bg-dark.mad-dog     { background:url('../img/mad-dog.jpg')           no-repeat center center; background-size: cover }
+	section.pull-quote.bg-dark.mad-dog     { background:url('../img/mad-dog-400.jpg')       no-repeat center center; background-size: cover }
 	section.pull-quote.bg-dark.bush-obama  { background:url('../img/bush-obama.jpg')        no-repeat center center; background-size: cover }
 	section.pull-quote.bg-dark.nyt         { background:url('../img/bg-nyt-400.jpg')        no-repeat center center; background-size: cover }
 
@@ -512,6 +511,7 @@ section.pull-quote.bg-dark.count-timer p.inner-top-banner { width:100%; color: #
 	section.pull-quote.bg-dark.count-timer .wrapper-full { width: 100%}
 	section.pull-quote.bg-dark.count-timer blockquote.testimonial:before, 
 	section.pull-quote.bg-dark.count-timer blockquote.testimonial:after { display: none }
+	section.pull-quote.bg-dark.count-timer { background:url('../img/bg-brennan-400.jpg')   no-repeat center center; background-size: cover }
 }
 
 @media all and (max-width:320px) {
@@ -592,11 +592,11 @@ section.pull-quote.bg-dark.count-timer p.inner-top-banner { width:100%; color: #
 /* desktop */
 @media all and (min-width: 768px) {
 	section.pull-quote h4 { line-height: 1.4; font-weight: normal }
-	section.pull-quote.bg-dark count-timer { background:url('../img/bg-brennan-1200.jpg')   no-repeat center center; background-size: auto }
-	section.pull-quote.bg-dark.whitehouse  { background:url('../img/bg-whitehouse-red.jpg') no-repeat center center; background-size: auto }
-	section.pull-quote.bg-dark.mad-dog     { background:url('../img/mad-dog.jpg')           no-repeat center center; background-size: auto }
-	section.pull-quote.bg-dark.bush-obama  { background:url('../img/bush-obama.jpg')        no-repeat center center; background-size: auto }
-	section.pull-quote.bg-dark.nyt         { background:url('../img/bg-nyt-1200.jpg')       no-repeat center center; background-size: auto }
+	section.pull-quote.bg-dark.count-timer { background:url('../img/bg-brennan-1800.jpg')   no-repeat center center; background-size: auto; background-attachment: fixed; }
+	section.pull-quote.bg-dark.whitehouse  { background:url('../img/bg-whitehouse-red.jpg') no-repeat center center; background-size: auto; background-attachment: fixed; }
+	section.pull-quote.bg-dark.mad-dog     { background:url('../img/mad-dog-1800.jpg')      no-repeat center center; background-size: auto; background-attachment: fixed; }
+	section.pull-quote.bg-dark.bush-obama  { background:url('../img/bush-obama.jpg')        no-repeat center center; background-size: auto; background-attachment: fixed; }
+	section.pull-quote.bg-dark.nyt         { background:url('../img/bg-nyt-1200.jpg')       no-repeat center center; background-size: auto; background-attachment: fixed; }
 }
 
 @media all and (min-width:768px) and (max-width: 991px) {
