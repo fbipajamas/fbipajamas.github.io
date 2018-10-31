@@ -362,7 +362,7 @@ nav.navbar li a.nav-links.buy-book:active, nav.navbar li a.nav-links.buy-book:ho
 	.jumbotron .img-fluid { float: right; max-height: 420px; margin: 0 -20px 0 0 }
 	.jumbotron h1 { margin-bottom: 28px; font-size: 40px; line-height: 1.1; width: 70% }
 	.jumbotron h2 { font-size:26px; margin-bottom:28px }
-	.jumbotron h3 { font-size:20px; margin-bottom:42px }
+	.jumbotron h3 { font-size:24px; margin-bottom:42px }
 	.jumbotron a.learn-more, .jumbotron a.buy-now { font-size: 17px }
 	.jumbotron a.learn-more { padding:8px 22px; margin-right:32px  }
 	.jumbotron a.buy-now { padding:8px 32px }
@@ -373,7 +373,7 @@ nav.navbar li a.nav-links.buy-book:active, nav.navbar li a.nav-links.buy-book:ho
 	.jumbotron .img-fluid { float: right; max-height: 440px; margin: 0 0 0 0 }
 	.jumbotron .flex-grid h1 { margin: 0 20px 28px -32px; font-size: 42px; line-height: 1.1;width: 70% }
 	.jumbotron .flex-grid h2 { font-size: 34px; margin: 0 0 40px -32px }
-	.jumbotron .flex-grid h3 { font-size: 20px; margin: 0 0 30px -32px  }
+	.jumbotron .flex-grid h3 { font-size: 24px; margin: 0 0 30px -32px  }
 	.jumbotron a.learn-more  { font-size: 19px; padding:12px 32px; margin:0 38px 0 -32px }
 	.jumbotron a.buy-now     { font-size: 19px; padding:12px 44px 12px 38px }
 
@@ -384,7 +384,7 @@ nav.navbar li a.nav-links.buy-book:active, nav.navbar li a.nav-links.buy-book:ho
 	.jumbotron .flex-grid .img-fluid { max-height:560px}
 	.jumbotron .flex-grid h1 { margin: 0 20px 28px -32px; font-size: 64px; line-height: 1 }
 	.jumbotron .flex-grid h2 { font-size: 34px; margin: 0 0 50px -32px }
-	.jumbotron .flex-grid h3 { font-size: 20px; margin: 0 0 40px -32px  }
+	.jumbotron .flex-grid h3 { font-size: 24px; margin: 0 0 40px -32px  }
 	.jumbotron a.learn-more  { font-size: 19px; padding:12px 32px; margin:0 38px 0 -32px }
 	.jumbotron a.buy-now     { font-size: 19px; padding:12px 44px 12px 38px }
 }
@@ -547,7 +547,7 @@ section.pull-quote.bg-dark.count-timer p.inner-top-banner { width:100%; color: #
 @media all and (min-width:375px) and (max-width:479px) {
 	section.pull-quote { padding-top: 20px; padding-bottom: 20px }
 	section.pull-quote .wrapper-regular { width: 90% }
-	section.pull-quote h4 { font-size: 22px; margin-bottom: 18px;; line-height: 1.4 }
+	section.pull-quote h4 { font-size: 22px; margin-bottom: 18px; line-height: 1.4 }
 	section.pull-quote p  { font-size: 17px }
 	section.pull-quote blockquote.testimonial:before, section.pull-quote blockquote.testimonial:after { font-size: 72px }
 	section.pull-quote blockquote.testimonial:before { top: 28px; left: 16px }
